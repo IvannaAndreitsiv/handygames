@@ -1,48 +1,196 @@
-html,
-body {
-    width: 100%;
-    height: 100%;
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin');
+
+:root {
+    font-family: 'Libre Franklin', sans-serif;
 }
 
-nav {
-    overflow: hidden;
-    float: right;
+header nav ul {
+    padding-left: 0;
 }
 
-nav li {
-    float: left;
-    list-style: none;
+header nav {
+    margin: 0 5px;
 }
 
-nav li a {
+header nav ul li {
+    list-style-type: none;
+}
+
+header nav ul li a {
     font-size: 25px;
     line-height: 124px;
     color: rgb(37, 39, 40);
     font-family: "Bender";
     font-weight: 300;
     font-style: italic;
-    text-align: right;
     text-decoration: none;
-    padding: 0 30px;
 }
 
-nav li a:hover {
-    color: #191970;
+header nav ul li a:hover {
+    text-decoration: underline;
 }
 
-.title {
+@media (min-width: 450px) {
 
-    font-size: 83px;
-    line-height: 124px;
+    body {
+        max-width: 1800px;
+        margin: auto;
+        padding: 0 5px
+    }
+    header nav {
+        display: flex;
+    }
+    header ul {
+        display: flex;
+        flex: 1;
+        align-items: center;
+
+    }
+    header nav ul li {
+        margin-left: 2%;
+    }
+}
+
+header div.banner {
+    height: 700px;
+    background-image: url(../img/mercedes.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header div.banner div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+header div.banner h1 {
+
+    min-width: 100%;
+    text-align: right;
+    font-size: 63px;
     color: rgb(37, 39, 40);
     font-family: "Franklin Gothic";
-    text-align: right;
+
 }
 
-.price {
-    font-size: 67px;
-    line-height: 124px;
-    color: rgb(37, 39, 40);
+h2 {
+    display: flex;
+    font-size: 50px;
     font-family: "Franklin Gothic";
-    text-align: right;
+    text-align: center;
+    justify-content: center;
+}
+
+#bpresent {
+    width: 1800px;
+    height: 800px;
+    background-image: linear-gradient(0deg, #232525 0%, #414345 100%);
+}
+
+#bpresent h2 {
+    font-size: 50px;
+    line-height: 124px;
+    color: rgb(255, 255, 255);
+    font-family: "Franklin Gothic";
+}
+
+#bpresent p {
+    font-size: 33px;
+    line-height: 124px;
+    color: rgb(255, 255, 255);
+    font-family: "Franklin Gothic";
+}
+
+.present-card img {
+    width: 20%;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.present-card div {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+@media (min-width:450px) {
+    .present-wrap {
+        font-size: 0;
+    }
+    .present-list {
+        display: inline-block;
+        vertical-align: top;
+        width: 30%;
+        font-size: 10px;
+    }
+}
+
+@media (min-width 550px) {
+    .present-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width 650px) {
+
+    .present-list {
+        grid-templat-columns: repeat (5, 1fr);
+
+    }
+}
+
+button {
+    border-top: 1px solid #f79797;
+    background: #d6656a;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9c3e3e), to(#d6656a));
+    background: -webkit-linear-gradient(top, #9c3e3e, #d6656a);
+    background: -moz-linear-gradient(top, #9c3e3e, #d6656a);
+    background: -ms-linear-gradient(top, #9c3e3e, #d6656a);
+    background: -o-linear-gradient(top, #9c3e3e, #d6656a);
+    padding: 8px 16px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
+    color: white;
+    font-size: 21px;
+    font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.button:hover {
+    border-top-color: #28597a;
+    background: #28597a;
+    color: #ccc;
+}
+
+.button:active {
+    border-top-color: #5c1b2b;
+    background: #5c1b2b;
+}
+
+div.assembly-instruction {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.assembly-instruction img {
+    width: 320px;
+    height: 320px;
+
+}
+
+.assembly-instruction i {
+    font-size: 25px;
 }

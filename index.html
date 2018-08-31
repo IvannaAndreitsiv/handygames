@@ -5,18 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/index.css">
     <title>Handy Games</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
     <header>
-        <div id="logo">
+
+        <nav>
             <a href="index.html">
                 <img src="img/logo.png" alt="HandyGames">
            </a>
-        </div>
-        <nav>
             <ul>
                 <li><a href="#bpresent">Best Present</a></li>
                 <li><a href="#assembling">Assembling</a></li>
@@ -25,59 +32,99 @@
                 <li><a href="#omodels">Other Models</a></li>
             </ul>
         </nav>
+        <div class="banner">
+            <div>
+                <h1>LOOKING FOR <b>REAL</b> GIFT?<br>WOODEN <b>MODEL</b><br> for only 11.99$</h1>
+                <button>ORDER</button>
+            </div>
+        </div>
+
     </header>
     <main>
-        <div id="logo-banner">
-            <img src="img/mercedes.png" alt="Mercedes-Benz">
-        </div>
-        <p class="title">LOOKING FOR <b>REAL</b> GIFT?<br>WOODEN <b>MODEL</b></p>
-        <p class="price">for only 11.99$</p>
         <section id="bpresent">
-            <p>THE BEST <b>PRESENT</b> FOR</p>
-            <img src="img/present/boss.png" alt="Boss">
-            <img src="img/present/colegue.png" alt="Colegue">
-            <img src="img/present/friend.png" alt="Friend">
-            <img src="img/present/husbend.png" alt="Husband">
-            <img src="img/present/kid.png" alt="Kid">
+            <h2>THE BEST PRESENT FOR</h2>
+            <div class="present-wrap">
+                <div class="present-list">
+                    <article class="present-card">
+                        <img src="img/present/boss.png" alt="Boss">
+                        <p>Boss</p>
+                    </article>
+                </div>
+            </div>
+            <div class="present-list">
+                <article class="present-card">
+                    <img src="img/present/colegue.png" alt="Colegue">
+                    <p>Colegue</p>
+                </article>
+            </div>
+            <div class="present-list">
+                <article class="present-card">
+                    <img src="img/present/friend.png" alt="Friend">
+                    <p>Friend</p>
+                </article>
+            </div>
+            <div class="present-list">
+                <article class="present-card">
+                    <img src="img/present/husbend.png" alt="Husband">
+                    <p>Husband</p>
+                </article>
+            </div>
+            <div class="present-list">
+                <article class="present-card">
+                    <img src="img/present/kid.png" alt="Kid">
+                    <p>Kid</p>
+                </article>
+            </div>
+            </div>
+
         </section>
         <section id="assembling">
-            <p>INTERESTING <b>ASSEMBLING</b> PROCESS</p>
-            <img src="img/process/mb-1.png" alt="Сar base">
-            <img src="img/process/mb-2.png" alt="Body of the car">
-            <img src="img/process/mb-3.png" alt="The main part of the car">
-            <img src="img/process/mb-4.png" alt="Mercedes-Benz G">
+            <h2>INTERESTING ASSEMBLING PROCESS</h2>
+            <div class="assembly-instruction">
+                <img src="img/process/mb-1.png" alt="Сar base">
+                <i class="fas fa-chevron-right"></i>
+                <img src="img/process/mb-2.png" alt="Body of the car">
+                <i class="fas fa-chevron-right"></i>
+                <img src="img/process/mb-3.png" alt="The main part of the car">
+                <i class="fas fa-chevron-right"></i>
+                <img src="img/process/mb-4.png" alt="Mercedes-Benz G">
+            </div>
         </section>
         <section id="photo">
-            <p><b>MERCEDES BENZ</b> G CLASS</p>
-            <img src="img/photo/left/back-open.png" alt="">
-            <img src="img/photo/left/back.png" alt="">
-            <img src="img/photo/left/side.png" alt="">
-            <img src="img/photo/left/front.png" alt="">
-            <img src="img/photo/right/top.png" alt="">
-            <img src="img/photo/right/middle.png" alt="">
-            <img src="img/photo/right/last.png" alt="">
+            <h2><b>MERCEDES BENZ</b> G CLASS</h2>
+            <img src="img/photo/left/back-open.png" alt="Wooden puzzle">
+            <img src="img/photo/left/back.png" alt="Wooden car">
+            <img src="img/photo/left/side.png" alt="Car made of wood">
+            <img src="img/photo/left/front.png" alt="Wooden toys for children">
+            <img src="img/photo/right/top.png" alt="A unique wooden toy">
+            <img src="img/photo/right/middle.png" alt="Eco-friendly wooden toys">
+            <img src="img/photo/right/last.png" alt="Inexpensive toys">
             <p><b>LOOKS FANTASTIC</b></p>
         </section>
         <section id="contact">
             <p>SIMPLE <b>ORDERING</b><br>fil the contakt form and we
                 <br>will <b>call you in 15 minutes</b></p>
-            <input type="text" name="client-name" placeholder="Name" id="client-name"><br>
-            <input type="text" name="client-mail" placeholder="E-Mail" id="client-mail"><br>
-            <input type="tel" name="client-phone" placeholder="Phone number" id="client-phone"><br>
-            <input type="submit" value="Send"><br>
+            <form>
+                <input type="text" name="client-name" placeholder="Name" id="client-name"><br>
+                <input type="text" name="client-mail" placeholder="E-Mail" id="client-mail"><br>
+                <input type="tel" name="client-phone" placeholder="Phone number" id="client-phone"><br>
+                <input type="submit" value="Send"><br>
+            </form>
         </section>
     </main>
-    <form>
-        <p>OR <b>JUST</b> PAY BY</p>
-        <input type="button" value="VISA/MASTERCARD" onClick='location.href="https://handygames.com.ua/index.php?route=checkout/checkout"'><br>
-    </form><br>
-    <p><b>BENEFITS</b></p>
-    <img src="img/pay/eco.png" alt="Eco product">
-    <p>ECOLOGICAL<br>PRODUCT</p>
-    <img src="img/pay/shipping.png" alt="Free shipping">
-    <p>FREE SHIPPING<br>FOR ALL UKRAINE</p>
-    <img src="img/pay/refund.png" alt="Refund">
-    <p>EASY REFUND<br>DURING 14 DAYS</p>
+    <footer>
+        <form>
+            <p>OR <b>JUST</b> PAY BY</p>
+            <input type="button" value="VISA/MASTERCARD" onClick='location.href="https://handygames.com.ua/index.php?route=checkout/checkout"'><br>
+        </form><br>
+        <p><b>BENEFITS</b></p>
+        <img src="img/pay/eco.png" alt="Eco product">
+        <p>ECOLOGICAL<br>PRODUCT</p>
+        <img src="img/pay/shipping.png" alt="Free shipping">
+        <p>FREE SHIPPING<br>FOR ALL UKRAINE</p>
+        <img src="img/pay/refund.png" alt="Refund">
+        <p>EASY REFUND<br>DURING 14 DAYS</p>
+    </footer>
 
 </body>
 
