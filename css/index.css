@@ -4,16 +4,32 @@
     font-family: 'Libre Franklin', sans-serif;
 }
 
-header nav ul {
-    padding-left: 0;
+body {
+    max-width: 1800px;
+    margin: auto;
+    background-color: #F7F7F7;
 }
 
 header nav {
-    margin: 0 5px;
+    margin: 0 60px;
+}
+
+header nav img {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+}
+
+header nav ul {
+    padding-left: 300px;
+
+
 }
 
 header nav ul li {
     list-style-type: none;
+    display: inline-block;
+
 }
 
 header nav ul li a {
@@ -24,128 +40,57 @@ header nav ul li a {
     font-weight: 300;
     font-style: italic;
     text-decoration: none;
+    padding-right: 30px;
 }
 
 header nav ul li a:hover {
-    text-decoration: underline;
+    color: grey;
 }
 
-@media (min-width: 450px) {
-
-    body {
-        max-width: 1800px;
-        margin: auto;
-        padding: 0 5px
-    }
-    header nav {
-        display: flex;
-    }
-    header ul {
-        display: flex;
-        flex: 1;
-        align-items: center;
-
-    }
-    header nav ul li {
-        margin-left: 2%;
-    }
-}
 
 header div.banner {
-    height: 700px;
+    height: 900px;
     background-image: url(../img/mercedes.png);
     background-position: center;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 header div.banner div {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
     justify-content: flex-end;
+    align-items: center;
 }
 
-header div.banner h1 {
-
-    min-width: 100%;
+.banner h1 {
+    position: absolute;
+    margin-left: 200px;
     text-align: right;
+    top: 55px;
     font-size: 63px;
+    line-height: 100px;
     color: rgb(37, 39, 40);
     font-family: "Franklin Gothic";
-
 }
 
-h2 {
-    display: flex;
-    font-size: 50px;
+.banner p {
+    position: absolute;
+    margin-left: 400px;
+    top: 245px;
+    text-align: right;
+    font-size: 47px;
+    line-height: 100px;
+    color: rgb(37, 39, 40);
     font-family: "Franklin Gothic";
-    text-align: center;
-    justify-content: center;
-}
-
-#bpresent {
-    width: 1800px;
-    height: 800px;
-    background-image: linear-gradient(0deg, #232525 0%, #414345 100%);
-}
-
-#bpresent h2 {
-    font-size: 50px;
-    line-height: 124px;
-    color: rgb(255, 255, 255);
-    font-family: "Franklin Gothic";
-}
-
-#bpresent p {
-    font-size: 33px;
-    line-height: 124px;
-    color: rgb(255, 255, 255);
-    font-family: "Franklin Gothic";
-}
-
-.present-card img {
-    width: 20%;
-    border: 1px solid black;
-    border-radius: 50%;
-}
-
-.present-card div {
-    display: flex;
-    justify-content: space-around;
-
-}
-
-@media (min-width:450px) {
-    .present-wrap {
-        font-size: 0;
-    }
-    .present-list {
-        display: inline-block;
-        vertical-align: top;
-        width: 30%;
-        font-size: 10px;
-    }
-}
-
-@media (min-width 550px) {
-    .present-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-
-@media (min-width 650px) {
-
-    .present-list {
-        grid-templat-columns: repeat (5, 1fr);
-
-    }
 }
 
 button {
+    position: absolute;
+    margin-left: 450px;
     border-top: 1px solid #f79797;
     background: #d6656a;
     background: -webkit-gradient(linear, left top, left bottom, from(#9c3e3e), to(#d6656a));
@@ -179,18 +124,408 @@ button {
     background: #5c1b2b;
 }
 
-div.assembly-instruction {
+.menu-icon {
+    text-align: right;
+}
+
+.menu-icon svg g {
+    fill: black;
+    display: none;
+}
+
+@media (min-width: 480px) {
+
+    header nav {
+        display: flex;
+    }
+
+    header nav ul {
+        display: flex;
+        flex: 1;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin-left: 5%;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* bpresent */
+
+#bpresent {
+    max-width: 1800px;
+    height: 800px;
+    background-image: linear-gradient(0deg, #232525 0%, #414345 100%);
+}
+
+#bpresent h2 {
+    position: absolute;
+    text-align: center;
+    margin-top: 70px;
+    min-width: 100%;
+    font-size: 50px;
+    line-height: 124px;
+    color: rgb(255, 255, 255);
+    font-family: "Franklin Gothic";
+}
+
+.present-list {
     display: flex;
-    align-items: center;
-    justify-content: center
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 35px;
+}
+
+.present-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+    padding-top: 1px;
+}
+
+.present-card img {
+    width: 180px;
+    height: 180px;
+    margin-top: 300px;
+
+}
+
+#bpresent p {
+    position: absolute;
+    margin-top: 500px;
+    font-size: 33px;
+    line-height: 124px;
+    color: rgb(255, 255, 255);
+    font-family: "Franklin Gothic";
+}
+
+/*assembling*/
+
+#assembling {
+    max-width: 1800px;
+    height: 640px;
+    background-color: white;
+}
+
+#assembling h2 {
+    text-align: center;
+    justify-content: center;
+    min-width: 100%;
+    font-size: 50px;
+    line-height: 124px;
+    color: rgb(37, 39, 40);
+    font-family: "Franklin Gothic";
+}
+
+.assembly-instruction {
+    position: absolute;
+    width: 100%;
+    background-size: contain;
 }
 
 .assembly-instruction img {
-    width: 320px;
-    height: 320px;
+    width: 307px;
+    height: 209px;
+    margin-left: 10px;
+}
+
+hr {
+    border: 0;
+    width: 100%;
+    height: 30px;
+    margin-top: 0px;
+    background: red;
+}
+
+
+/*photo*/
+
+#photo {
+    background-image: linear-gradient(0deg, #232525 0%, #414345 100%);
+}
+
+#photo h2 {
+    font-size: 50px;
+    line-height: 115px;
+    padding-left: 90px;
+    margin-top: -8;
+    color: rgb(255, 255, 255);
+    font-family: "Franklin Gothic";
+}
+
+#photo p {
+    font-size: 65px;
+    line-height: 115px;
+    margin-bottom: 0;
+    color: rgb(255, 255, 255);
+    font-family: "Franklin Gothic";
+}
+
+#photo .left-car {
+    position: absolute;
+    width: 50%;
+}
+
+.left-car-first {
+    position: absolute;
+    margin-left: 90px;
+    margin-top: -50px;
+}
+
+.left-car-first img {
+    width: 600px;
+    height: 400px;
+}
+
+.left-car-second {
+    position: absolute;
+    margin-left: 426px;
+    margin-top: 410px;
+    ;
+}
+
+.left-car-second img {
+    width: 273px;
+    height: 185px;
+}
+
+.left-car-third {
+    position: absolute;
+    margin-top: 670px;
+    margin-left: 425px;
+}
+
+.left-car-third img {
+    width: 273px;
+    height: 188px;
+}
+
+.left-car-fourth {
+    position: absolute;
+    margin-top: 500px;
+}
+
+.left-car-fourth img {
+    width: 410px;
+    height: 280px;
+}
+
+.right-car-first {
+    margin-left: 770;
+    margin-top: -170;
+}
+
+.right-car-first img {
+    width: 500px;
+    height: 342px;
+}
+
+.right-car-second {
+    margin-left: 690px;
+    margin-top: 10px;
+}
+
+.right-car-second img {
+    width: 650px;
+    height: 412px;
+}
+
+/*contact*/
+
+hr {
+    border: 0;
+    width: 100%;
+    height: 30px;
+    margin-top: 0px;
+    background: red;
+}
+
+
+div .order {
+    max-width: 1800px;
+    height: 800px;
 
 }
 
-.assembly-instruction i {
-    font-size: 25px;
+#contact {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    margin-left: 50px;
+}
+
+
+#contact p {
+    font-size: 30px;
+    line-height: 37px;
+    color: rgb(37, 39, 40);
+    font-family: "Franklin Gothic";
+    text-align: left;
+}
+
+.contact-details {
+    position: absolute;
+    margin-top: 150px;
+
+}
+
+.contact-details input[type="text"],
+input[type="tel"] {
+    width: 200px;
+    height: 35px;
+    margin: 3px;
+    font-size: 20px;
+    line-height: 124px;
+    color: rgb(37, 39, 40);
+    font-family: "Bender";
+    font-weight: 300;
+    font-style: italic;
+    text-align: left;
+}
+
+.payment-method {
+    position: absolute;
+    padding-left: 90px;
+}
+
+.payment-method p {
+    font-size: 37px;
+    line-height: 124px;
+    color: rgb(37, 39, 40);
+    font-family: "Franklin Gothic";
+    margin-left: 400px;
+    margin-top: 10px
+}
+
+.certificates {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 60px;
+    display: inline-block;
+}
+
+.certificates p {
+    font-size: 30px;
+    line-height: 30px;
+    margin-left: 460px;
+    color: rgb(37, 39, 40);
+    font-family: "Franklin Gothic";
+}
+
+.advantages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 310px;
+}
+
+.ecology {
+    position: absolute;
+    width: 700px;
+    height: 110px;
+}
+
+.ecology p {
+    position: absolute;
+    margin: 5px;
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+    color: rgb(37, 39, 40);
+    font-family: "Bender";
+    font-style: italic;
+
+}
+
+.advantages img {
+    width: 120px;
+    height: 120px;
+    padding-right: 40px;
+}
+
+.payment-method input {
+    margin-left: 410px;
+    position: absolute;
+    border-top: 1px solid #ad1a1a;
+    background: #db0000;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f00c0c), to(#db0000));
+    background: -webkit-linear-gradient(top, #f00c0c, #db0000);
+    background: -moz-linear-gradient(top, #f00c0c, #db0000);
+    background: -ms-linear-gradient(top, #f00c0c, #db0000);
+    background: -o-linear-gradient(top, #f00c0c, #db0000);
+    padding: 18.5px 37px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
+    color: white;
+    font-size: 15px;
+    font-family: Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.payment-method input:hover {
+    border-top-color: #ed0c0c;
+    background: #ed0c0c;
+    color: #593d59;
+}
+
+.payment-method input:active {
+    border-top-color: #d41717;
+    background: #d41717;
+}
+
+.contact-details input[type="submit"] {
+    border-top: 1px solid #fc0808;
+    background: #fa0000;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f00c0c), to(#fa0000));
+    background: -webkit-linear-gradient(top, #f00c0c, #fa0000);
+    background: -moz-linear-gradient(top, #f00c0c, #fa0000);
+    background: -ms-linear-gradient(top, #f00c0c, #fa0000);
+    background: -o-linear-gradient(top, #f00c0c, #fa0000);
+    padding: 4.5px 9px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
+    color: white;
+    font-size: 20px;
+    font-family: "Franklin Gothic";
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.contact-details input[type="submit"]:hover {
+    border-top-color: #ed0c0c;
+    background: #ed0c0c;
+    color: #25c256;
+}
+
+.contact-details input[type="submit"]:active {
+    border-top-color: #f50808;
+    background: #f50808;
+}
+
+.feedback {
+    position: absolute;
+    margin-top: 500px;
+    height: 100px;
+    width: 100%;
+    left: 0px;
+    background: linear-gradient(0deg, #232525 0%, #414345 100%);
+
 }
