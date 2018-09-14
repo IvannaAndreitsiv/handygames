@@ -21,7 +21,7 @@ header nav img {
 }
 
 header nav ul {
-    padding-left: 300px;
+    padding-left: 500px;
 
 
 }
@@ -89,7 +89,8 @@ header div.banner div {
 
 button {
     position: absolute;
-    margin-left: 450px;
+    width: 206px;
+    margin-left: 430px;
     border-top: 1px solid #f79797;
     background: #d6656a;
     background: -webkit-gradient(linear, left top, left bottom, from(#9c3e3e), to(#d6656a));
@@ -123,34 +124,54 @@ button {
     background: #5c1b2b;
 }
 
-.menu-icon {
-    text-align: right;
-}
-
-.menu-icon svg g {
-    fill: black;
-    display: none;
-}
-
-@media (min-width: 480px) {
-
-    header nav {
-        display: flex;
+@media screen and (max-width: 480px) {
+    .banner h1 {
+        font-size: 33px;
+        text-align: center;
+        margin-left: 30px;
+        line-height: 55px;
+    }
+    .banner p {
+        font-size: 33px;
+        margin-left: 110px;
+        line-height: 35px;
+        margin-top: -0px;
     }
 
-    header nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        flex: 1;
-        align-items: center;
+    #blink {
+        -webkit-animation: blink 2s linear infinite;
+        animation: blink 2s linear infinite;
+        font-weight: bold;
+        color: color: #F00;
     }
 
-    header nav ul li {
-        margin-left: 5%;
+    @-webkit-keyframes blink {
+        0% {
+            color: #F00;
+        }
+        50% {
+            color: #FBB;
+        }
+        100% {
+            color: #F00;
+        }
     }
 
-    .menu-icon {
-        display: block;
+    @keyframes blink {
+        0% {
+            color: #F00;
+        }
+        50% {
+            color: #FBB;
+        }
+        100% {
+            color: #F00;
+        }
+
+        button {
+            margin-left: 150px;
+            width: 100px;
+        }
     }
 }
 
@@ -171,13 +192,31 @@ button {
     line-height: 124px;
     color: rgb(255, 255, 255);
     font-family: "Franklin Gothic";
+    text-shadow: 0 -1px rgba(0, 0, 0, .1);
+    -webkit-animation: pulsate 1.2s linear infinite;
+    animation: pulsate 1.2s linear infinite;
+}
+
+
+
+@-webkit-keyframes pulsate {
+    50% {
+        color: #fff;
+        text-shadow: 0 -1px rgba(0, 0, 0, .3), 0 0 5px #ffd, 0 0 8px #fff;
+    }
+}
+
+@keyframes pulsate {
+    50% {
+        color: #fff;
+        text-shadow: 0 -1px rgba(0, 0, 0, .3), 0 0 5px #ffd, 0 0 8px #fff;
+    }
 }
 
 .present-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-left: 35px;
 }
 
 .present-card {
@@ -186,6 +225,12 @@ button {
     justify-content: center;
     padding: 30px;
     padding-top: 1px;
+}
+
+.present-card:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .present-card img {
@@ -204,11 +249,36 @@ button {
     font-family: "Franklin Gothic";
 }
 
+@media screen and (max-width: 480px) {
+    #bpresent h2 {
+        font-size: 30px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .present-card {
+        padding: 10px;
+        height: 300px;
+    }
+
+    .present-card img {
+        height: 160px;
+        width: 160px;
+        margin-top: 100px;
+    }
+    #bpresent p {
+        margin-top: 250px;
+        font-size: 25px;
+        line-height: 90px;
+    }
+
+}
+
 /*assembling*/
 
 #assembling {
     max-width: 1366px;
-    height: 640px;
+    min-height: 640px;
     background-color: white;
 }
 
@@ -226,7 +296,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    position: absolute;
+
     width: 100%;
     background-size: contain;
 }
@@ -236,6 +306,7 @@ button {
     height: 209px;
     margin-left: 10px;
 }
+
 .fas fa-angle-double-right {
     color: red;
 }
@@ -248,8 +319,27 @@ hr {
     background: linear-gradient(0deg, #cb2d3d 0%, #ef4739 100%);
 }
 
+@media screen and (max-width: 480px) {
+    #assembling {
+        
+    }
+    #assembling h2 {
+        font-size: 27px;
+        margin: 0px;
+    }
+    .steps {
+        margin-top: 40px;
+    }
+    .steps img {
+        width: 207px;
+        height: 109px;
+    }
+}
+
+
 
 /*photo*/
+
 #photo {
     background-image: url(../img/photo/collage.png);
     background-position: center;
@@ -260,7 +350,6 @@ hr {
     min-height: 1150px;
     position: relative;
 }
-
 /*contact*/
 
 hr {
@@ -268,14 +357,15 @@ hr {
     width: 100%;
     height: 30px;
     margin-top: 0px;
-    background: linear-gradient(0deg, #cb2d3d 0%, #ef4739 100%);
+    background: red;
 }
 
 
-div .order {
+.order {
     max-width: 1800px;
-    height: 800px;
-
+    max-height: 800px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #contact {
@@ -536,4 +626,21 @@ input[type="tel"] {
     position: absolute;
     color: white;
     font-family: "Franklin Gothic";
+}
+
+@media screen and (max-width: 480px) {
+
+    .payment-method p {
+        font-size: 30px;
+    }
+    .order {
+        justify-content: center;
+    }
+    #contact p {
+        font-size: 40px;
+        line-height: 35px;
+    }
+   .advantages p {
+       
+   }
 }
