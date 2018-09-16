@@ -5,7 +5,7 @@
 }
 
 body {
-    max-width: 1366px;
+    max-width: 1300px;
     margin: auto;
     background-color: #F7F7F7;
 }
@@ -21,9 +21,7 @@ header nav img {
 }
 
 header nav ul {
-    padding-left: 500px;
-
-
+    text-align: right;
 }
 
 header nav ul li {
@@ -125,6 +123,17 @@ button {
 }
 
 @media screen and (max-width: 480px) {
+
+    header nav ul {
+        margin-left: 200px;
+        text-align: right;
+        display: inline-grid;
+    }
+    header nav ul li a {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
     .banner h1 {
         font-size: 33px;
         text-align: center;
@@ -168,11 +177,13 @@ button {
             color: #F00;
         }
 
-        button {
-            margin-left: 150px;
-            width: 100px;
-        }
     }
+    button {
+        margin-left: 230px;
+        top: 330px;
+    }
+
+
 }
 
 /* bpresent */
@@ -184,9 +195,9 @@ button {
 }
 
 #bpresent h2 {
-    position: absolute;
+    right: 0px;
     text-align: center;
-    margin-top: 70px;
+    position: absolute;
     min-width: 100%;
     font-size: 50px;
     line-height: 124px;
@@ -214,14 +225,24 @@ button {
 }
 
 .present-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
 .present-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     padding: 30px;
     padding-top: 1px;
@@ -277,14 +298,13 @@ button {
 /*assembling*/
 
 #assembling {
-    max-width: 1366px;
+    max-width: 1300px;
     min-height: 640px;
     background-color: white;
 }
 
 #assembling h2 {
     text-align: center;
-    justify-content: center;
     min-width: 100%;
     font-size: 50px;
     line-height: 124px;
@@ -296,20 +316,15 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
     width: 100%;
-    background-size: contain;
 }
 
 .steps img {
-    width: 307px;
-    height: 209px;
-    margin-left: 10px;
+    width: 257px;
+    height: 150px;
 }
 
-.fas fa-angle-double-right {
-    color: red;
-}
+
 
 hr {
     border: 0;
@@ -320,11 +335,9 @@ hr {
 }
 
 @media screen and (max-width: 480px) {
-    #assembling {
-        
-    }
+
     #assembling h2 {
-        font-size: 27px;
+        font-size: 25px;
         margin: 0px;
     }
     .steps {
@@ -345,11 +358,9 @@ hr {
     background-position: center;
     background-size: cover;
     display: flex;
-    align-items: center;
-    justify-content: center;
     min-height: 1150px;
-    position: relative;
 }
+
 /*contact*/
 
 hr {
@@ -362,32 +373,52 @@ hr {
 
 
 .order {
-    max-width: 1800px;
-    max-height: 800px;
-    display: flex;
-    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    width: 100%;
+    min-height: 600px;
+    ;
 }
 
 #contact {
-    display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-    margin-left: 50px;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    height: 400px;
+    width: 440px;
 }
 
 
 #contact p {
     font-size: 30px;
     line-height: 37px;
+    width: 400px;
+    height: 110px;
     color: rgb(37, 39, 40);
     font-family: "Franklin Gothic";
-    text-align: left;
+    text-align: center;
 }
 
 .contact-details {
-    position: absolute;
-    margin-top: 150px;
-
+    width: 400px;
+    height: 210px;
+    text-align: center;
 }
 
 .contact-details input[type="text"],
@@ -405,46 +436,41 @@ input[type="tel"] {
 }
 
 .payment-method {
-    position: absolute;
-    padding-left: 90px;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    width: 440px;
+    height: 480px
 }
 
 .payment-method p {
     font-size: 37px;
-    line-height: 124px;
+    min-height: 90px;
+    margin: 0px;
     color: rgb(37, 39, 40);
     font-family: "Franklin Gothic";
-    margin-left: 400px;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    text-align: center;
 }
 
 .certificates {
-    position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-left: 125px;
-    margin-top: 70px;
-    width: 800px;
-    height: 250px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: 400px;
+    min-height: 200pxx
 }
 
 .certificates p {
-    position: inherit;
+    position: absolute;
+    margin-left: 130px;
     font-size: 30px;
     line-height: 30px;
-    margin-left: 330px;
-    left: 0px;
-    height: 35px;
     color: rgb(37, 39, 40);
     font-family: "Franklin Gothic";
 }
 
 .advantages {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     margin-top: 50px;
     width: 150px;
     height: 150px;
@@ -458,18 +484,17 @@ input[type="tel"] {
 .advantages p {
     font-size: 15px;
     line-height: 15px;
+    text-align: center;
     color: rgb(37, 39, 40);
     font-family: "Bender";
     font-weight: 300;
     font-style: italic;
-    text-align: center;
     margin-left: 10px;
 }
 
 
 .payment-method input {
-    margin-left: 410px;
-    position: absolute;
+    margin-left: 80px;
     border-top: 1px solid #ad1a1a;
     background: #db0000;
     background: -webkit-gradient(linear, left top, left bottom, from(#f00c0c), to(#db0000));
@@ -542,34 +567,30 @@ input[type="tel"] {
 }
 
 .find-us {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: absolute;
-    margin-left: 900px;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    width: 400px;
+    height: 480px;
 }
 
 .find-us h1 {
     font-size: 30px;
     line-height: 37px;
+    margin-top: 0px;
     color: rgb(37, 39, 40);
     font-family: "Franklin Gothic";
     text-align: center;
-    width: 200%;
-    height: 500px;
-    margin-left: 20px;
-    margin-top: 40px;
+
 }
 
-.find-us-1 {
-    display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-    margin-top: 120px;
-}
 
 .contact-us {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-left: 80px;
 
@@ -586,61 +607,68 @@ input[type="tel"] {
 }
 
 .find-us-1 iframe {
-    display: flex;
-    flex-wrap: wrap;
     border: none;
-    margin-top: 40px;
-    margin-left: 90px;
+    width: 350px;
+    height: 200px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
-.feedback {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: absolute;
-    margin-top: 500px;
-    height: 185px;
-    width: 100%;
-    left: 0px;
-    background: linear-gradient(0deg, #232525 0%, #414345 100%);
-}
 
-.feedback-title {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+@media screen and (max-width: 950px) {
+    .order {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
 
-}
+    .payment-method {
+        height: 430px;
+        margin-top: 40px;
+    }
+    .contact-us {
+        width: 300px;
 
-.far {
-    margin-top: 10px;
-    color: #fbfbfb;
-    font-size: 30px;
-    margin-left: -250px;
-}
-
-.feedback-title h1 {
-    font-size: 20px;
-    line-height: 27px;
-    margin-left: 40px;
-    position: absolute;
-    color: white;
-    font-family: "Franklin Gothic";
+    }
+    .find-us-1 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .find-us {
+        width: 100%;
+    }
+    .find-us-1 iframe {
+        width: 450px;
+        height: 300px;
+        margin-top: 0;
+    }
 }
 
 @media screen and (max-width: 480px) {
 
-    .payment-method p {
-        font-size: 30px;
-    }
     .order {
-        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    #contact {
+        margin-left: 40px;
     }
     #contact p {
-        font-size: 40px;
-        line-height: 35px;
+        text-align: center;
+        font-size: 25px;
+        line-height: 30px;
     }
-   .advantages p {
-       
-   }
+
+    .certificates {
+        margin-left: 30px;
+    }
+    .payment-method input {
+        margin-left: 100px;
+    }
+    .find-us-1 {
+        flex-direction: column;
+    }
+
 }
