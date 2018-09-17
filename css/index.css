@@ -51,15 +51,27 @@ header div.banner {
     background-image: url(../img/mercedes.png);
     background-position: center;
     background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     position: relative;
 }
 
 header div.banner div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -127,6 +139,7 @@ button {
     header nav ul {
         margin-left: 200px;
         text-align: right;
+        display: -ms-inline-grid;
         display: inline-grid;
     }
     header nav ul li a {
@@ -311,8 +324,13 @@ button {
 }
 
 .assembly-instruction {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     width: 100%;
 }
@@ -355,8 +373,10 @@ hr {
     background-image: url(../img/photo/collage.png);
     background-position: center;
     background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    min-height: 1150px;
+    min-height: 1150px
 }
 
 /*contact*/
@@ -583,7 +603,6 @@ input[type="tel"] {
 
 }
 
-
 .contact-us {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -591,7 +610,6 @@ input[type="tel"] {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-left: 80px;
-
 }
 
 .contact-us p {
@@ -666,7 +684,10 @@ input[type="tel"] {
         margin-left: 100px;
     }
     .find-us-1 {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     }
 
 }
