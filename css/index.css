@@ -179,17 +179,18 @@ button {
 
     }
     button {
-        margin-left: 230px;
+        margin-left: 220px;
         top: 330px;
     }
 
 
 }
 
+
 /* bpresent */
 
 #bpresent {
-    max-width: 1366%;
+    max-width: 1300%;
     min-height: 800px;
     background-image: linear-gradient(0deg, #232525 0%, #414345 100%);
 }
